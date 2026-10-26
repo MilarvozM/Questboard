@@ -1,0 +1,70 @@
+/* Chronicle style: fantasy quest scroll.
+ * A style is one file of design tokens and the few rules where its shapes differ (DESIGN.md §2.7).
+ * Tokens and shape rules apply under :root[data-theme="chronicle"]; the swatch rules apply always, so every style loads at once
+ * and the settings popup can show each swatch. */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:wght@400;500&family=Noto+Serif+SC:wght@400;500&display=swap");
+
+:root[data-theme="chronicle"] {
+  --tint: 92 62 30;
+  --shade: 245 236 213;
+  --prose: #3b2a18;
+  --out-bg: rgba(92, 62, 30, 0.07);
+  --backdrop: rgba(60, 40, 20, 0.35);
+  --scan: transparent;
+  --bg: #e8dbbd;
+  --panel: rgba(250, 243, 225, 0.84);
+  --panel-solid: #f5ecd5;
+  --text: #2a1c0e;
+  --dim: #66503a;
+  --faint: #8f7a60;
+  --main: #8a6510;
+  --side: #1f4e79;
+  --act: #3d6b2c;
+  --danger: #b0301c;
+  /* Fonts: the Google font first, then the closest fonts macOS and Windows ship with, then Chinese, so the style
+     holds up offline. macOS: Songti SC, STSong, Palatino, Hoefler Text, Iowan Old Style. Windows: SimSun, Palatino Linotype,
+     Georgia; Garamond and Book Antiqua where Microsoft Office installed them. Numbers use the body face, as in the mockup. */
+  --cjk: "Noto Serif SC", "Songti SC", "STSong", "SimSun", "NSimSun", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  --head: "Cinzel", "Trajan Pro", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, var(--cjk);
+  --body: "EB Garamond", Garamond, "Hoefler Text", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, var(--cjk);
+  --mono: var(--body);
+  /* Sound cues (§2.4), as in terminal.css. Chronicle: the same tunes an octave lower on a long triangle wave, like small bells. */
+  --cue-wave: triangle;
+  --cue-volume: 0.2;
+  --cue-attack: 0.012;
+  --cue-length: 0.9;
+  --cue-done: 392 0, 587.5 0.09;
+  --cue-failed: 116.5 0, 87.5 0.13;
+  --cue-dropped: 196 0;
+  --cue-new: 293.5 0, 440 0.08;
+  --cue-quest: 261.5 0, 329.5 0.11, 392 0.22, 523.5 0.33;
+  --cue-crit: 494 0;
+  --cue-undo: 261.5 0, 196 0.07;
+  color-scheme: light;
+}
+
+.styles .sw.chronicle { background: #e8dbbd; border: 3px double rgba(92, 62, 30, 0.5); }
+.styles .sw.chronicle::before { content: ""; position: absolute; left: 10px; right: 10px; top: 12px; height: 2px; background: #8a6510; box-shadow: 0 10px 0 #1f4e79, 0 20px 0 rgba(92, 62, 30, 0.45); }
+
+[data-theme="chronicle"] body {
+  font-variant-numeric: lining-nums tabular-nums;
+  background:
+    radial-gradient(ellipse at 50% 45%, transparent 55%, rgba(92, 62, 30, 0.28) 100%),
+    radial-gradient(circle at 18% 22%, rgba(140, 100, 40, 0.10), transparent 30%),
+    radial-gradient(circle at 82% 72%, rgba(140, 100, 40, 0.09), transparent 35%),
+    repeating-linear-gradient(0deg, rgba(92, 62, 30, 0.025) 0 1px, transparent 1px 3px),
+    var(--bg);
+}
+[data-theme="chronicle"] .frame { background-image: none; border-color: var(--line-strong); box-shadow: inset 0 0 0 3px var(--panel-solid), inset 0 0 0 4px var(--line); backdrop-filter: none; }
+[data-theme="chronicle"] .hexclip { clip-path: circle(closest-side); }
+[data-theme="chronicle"] .grade .hexclip { background: var(--danger); }
+[data-theme="chronicle"] .grade strong { color: var(--danger); }
+[data-theme="chronicle"] .grade p { color: var(--danger); }
+[data-theme="chronicle"] .label::before { content: ""; width: 5px; height: 5px; background: var(--main); transform: rotate(45deg); }
+[data-theme="chronicle"] .f-obj, [data-theme="chronicle"] .results h1, [data-theme="chronicle"] .grade strong, [data-theme="chronicle"] .banner .k { text-shadow: none; }
+[data-theme="chronicle"] .f-obj .ic, [data-theme="chronicle"] .ob.cur > .ic { filter: none; }
+[data-theme="chronicle"] .bar i, [data-theme="chronicle"] .tl .fill, [data-theme="chronicle"] .xpgain .bar i { box-shadow: none; }
+[data-theme="chronicle"] .brand-mark { border-radius: 50%; transform: none; }
+[data-theme="chronicle"] .brand-mark::after { border-radius: 50%; }
+[data-theme="chronicle"] .f-obj, [data-theme="chronicle"] .detail h1, [data-theme="chronicle"] .banner .t, [data-theme="chronicle"] .page h1 { font-weight: 500; letter-spacing: 0.01em; }
+[data-theme="chronicle"] .q h3, [data-theme="chronicle"] .ob .tx, [data-theme="chronicle"] .prose { font-size: 1.06em; }

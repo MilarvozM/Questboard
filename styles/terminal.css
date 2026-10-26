@@ -1,0 +1,48 @@
+/* Terminal style: sci-fi HUD.
+ * A style is one file of design tokens and the few rules where its shapes differ (DESIGN.md §2.7).
+ * Tokens and shape rules apply under :root[data-theme="terminal"]; the swatch rules apply always, so every style loads at once
+ * and the settings popup can show each swatch. */
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500&family=Noto+Sans+SC:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root[data-theme="terminal"] {
+  --tint: 200 230 240;      /* overlay colour for lines and hovers, as an RGB triple */
+  --shade: 6 9 13;          /* backdrop colour behind bars and banners */
+  --prose: #d3dce1;
+  --out-bg: rgba(0, 0, 0, 0.28);
+  --backdrop: rgba(3, 5, 8, 0.6);
+  --scan: rgba(0, 0, 0, 0.08);
+  --bg: #06090d;
+  --panel: rgba(16, 24, 32, 0.78);
+  --panel-solid: #0d141b;
+  --text: #e8eef2;
+  --dim: #9eabb4;
+  --faint: #66737d;
+  --main: #5ad7e6;
+  --side: #f0a848;
+  --act: #8fd3a6;
+  --danger: #ff6a5c;
+  /* Fonts: the Google font first, then the closest fonts macOS and Windows ship with, then Chinese, so the style
+     holds up offline. macOS: PingFang SC, Hiragino Sans GB, DIN Alternate, Avenir Next, Helvetica Neue, SF Mono, Menlo, Monaco.
+     Windows: Microsoft YaHei, DengXian, Bahnschrift, Segoe UI, Arial, Cascadia Mono, Consolas. */
+  --cjk: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "DengXian", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  --head: "Chakra Petch", "Bahnschrift", "DIN Alternate", "Avenir Next", "Segoe UI", -apple-system, var(--cjk);
+  --body: "IBM Plex Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, var(--cjk);
+  --mono: "JetBrains Mono", "Cascadia Mono", ui-monospace, "SF Mono", Menlo, Consolas, Monaco, var(--cjk);
+  /* Sound cues (§2.4), synthesized in the browser: per event, notes as "frequency-in-Hz start-in-seconds", comma-separated;
+     each note uses the wave shape, peak volume, attack and length below. Terminal: short clean sine blips. */
+  --cue-wave: sine;
+  --cue-volume: 0.2;
+  --cue-attack: 0.012;
+  --cue-length: 0.32;
+  --cue-done: 784 0, 1175 0.09;
+  --cue-failed: 233 0, 175 0.13;
+  --cue-dropped: 392 0;
+  --cue-new: 587 0, 880 0.08;
+  --cue-quest: 523 0, 659 0.11, 784 0.22, 1047 0.33;
+  --cue-crit: 988 0;
+  --cue-undo: 523 0, 392 0.07;
+  color-scheme: dark;
+}
+
+.styles .sw.terminal { background: #06090d; border: 1px solid rgba(200, 230, 240, 0.25); }
+.styles .sw.terminal::before { content: ""; position: absolute; left: 10px; right: 10px; top: 14px; height: 2px; background: #5ad7e6; box-shadow: 0 10px 0 #f0a848, 0 20px 0 rgba(200, 230, 240, 0.4); }
