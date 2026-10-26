@@ -1,0 +1,23 @@
+# User data: each person's quests and player stats stay out of the app repository
+/data/
+
+# Personal overrides of config.default.jsonc
+/config.jsonc
+
+# Build output and dependencies (v1 has none; the later single-file downloads will)
+/dist/
+node_modules/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors, and Obsidian if the repository itself is opened as a vault
+.vscode/
+.idea/
+.obsidian/
+*.swp
