@@ -1,0 +1,33 @@
+{
+  "questboard": 1,
+  "guilds": [
+    {
+      "id": "work",
+      "emblem": "nodes"
+    },
+    {
+      "id": "study",
+      "emblem": "book"
+    },
+    {
+      "id": "health",
+      "emblem": "shield"
+    },
+    {
+      "id": "home",
+      "emblem": "roof"
+    },
+    {
+      "id": "people",
+      "emblem": "rings"
+    },
+    {
+      "id": "admin",
+      "emblem": "coin"
+    },
+    {
+      "id": "play",
+      "emblem": "nib"
+    }
+  ]
+}

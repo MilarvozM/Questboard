@@ -1,0 +1,42 @@
+{
+  "about": "Guild emblems: single-weight line drawings on a 24 px grid, as SVG inner markup. Each pair holds two icons for contrasting guilds; singles stand alone. A guild names one by its key, or uses its own SVG path.",
+  "pairs": [
+    ["sun", "moon"], ["flame", "drop"], ["mountain", "wave"], ["sword", "shield"], ["key", "lock"], ["sprout", "tree"],
+    ["hourglass", "bolt"], ["anchor", "feather"], ["compass", "map"], ["book", "scroll"], ["roof", "tent"], ["coin", "gem"]
+  ],
+  "singles": ["nib", "nodes", "rings", "heart", "flask", "hammer", "note", "cup"],
+  "icons": {
+    "sun": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6 7 7M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4\"/>",
+    "moon": "<path d=\"M19 14.5A7.5 7.5 0 1 1 9.5 5a6 6 0 0 0 9.5 9.5z\"/>",
+    "flame": "<path d=\"M12 21c-3.9 0-6.5-2.6-6.5-6 0-3.5 3-5.5 3.5-9 2 1.5 3 3.5 3 5.5 1-.8 1.5-2 1.5-3.5 2.5 2 4.5 4.5 4.5 7 0 3.4-2.6 6-6 6z\"/>",
+    "drop": "<path d=\"M12 3.5c3 4 6 7 6 10.5a6 6 0 0 1-12 0c0-3.5 3-6.5 6-10.5z\"/><path d=\"M9 15a3 3 0 0 0 3 3\"/>",
+    "mountain": "<path d=\"M2.5 19.5 9 8l4 7 2.5-4 6 8.5z\"/><path d=\"M7.4 10.8 9 12l1.5-1.2\"/>",
+    "wave": "<path d=\"M3 9c2 0 2-2 4.5-2S10 9 12 9s2-2 4.5-2S19 9 21 9M3 14c2 0 2-2 4.5-2s2.5 2 4.5 2 2-2 4.5-2 2.5 2 4.5 2M3 19c2 0 2-2 4.5-2s2.5 2 4.5 2 2-2 4.5-2 2.5 2 4.5 2\"/>",
+    "sword": "<path d=\"M20 4h-3.5L8 12.5l3.5 3.5L20 7.5z\"/><path d=\"M5.5 11.5l7 7M8.5 15.5l-4 4\"/>",
+    "shield": "<path d=\"M12 3 19 6v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M7.5 12.5h2.5l1.2-2.5 1.8 5 1.2-2.5h2.3\"/>",
+    "key": "<circle cx=\"8\" cy=\"15\" r=\"4\"/><path d=\"M11 12l8.5-8.5M16 7l2.5 2.5M14 9l2 2\"/>",
+    "lock": "<path d=\"M5 10.5h14v10H5z\"/><path d=\"M8 10.5v-3a4 4 0 0 1 8 0v3M12 14.5V17\"/>",
+    "sprout": "<path d=\"M12 21v-9\"/><path d=\"M12 12c0-4-3-6-7-6 0 4 3 6 7 6zM12 14c0-3.5 2.5-5.5 7-5.5 0 3.5-2.5 5.5-7 5.5z\"/>",
+    "tree": "<path d=\"M12 21v-4.5\"/><path d=\"M12 3 5.5 13h4L7 16.5h10L14.5 13h4z\"/>",
+    "hourglass": "<path d=\"M6.5 3.5h11M6.5 20.5h11M7.5 3.5c0 5 9 6 9 8.5s-9 3.5-9 8.5M16.5 3.5c0 5-9 6-9 8.5s9 3.5 9 8.5\"/>",
+    "bolt": "<path d=\"M13.5 2.5 5 13.5h6l-1 8 8.5-11h-6z\"/>",
+    "anchor": "<circle cx=\"12\" cy=\"5\" r=\"2\"/><path d=\"M12 7v14M8.5 10.5h7M4.5 13.5c0 4 3.5 7.5 7.5 7.5s7.5-3.5 7.5-7.5\"/>",
+    "feather": "<path d=\"M20 4C12 4 7 9 7 17l-3 3\"/><path d=\"M20 4c0 8-5 13-13 13M10 14h5.5M12.5 10.5H18\"/>",
+    "compass": "<circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M15.5 8.5l-2.2 4.8-4.8 2.2 2.2-4.8z\"/>",
+    "map": "<path d=\"M3.5 6.5 9 4.5l6 2 5.5-2v13l-5.5 2-6-2-5.5 2z\"/><path d=\"M9 4.5v13M15 6.5v13\"/>",
+    "book": "<path d=\"M3.5 5.5h7c1 0 1.5.5 1.5 1.5v13c0-1-.5-1.5-1.5-1.5h-7z\"/><path d=\"M20.5 5.5h-7c-1 0-1.5.5-1.5 1.5v13c0-1 .5-1.5 1.5-1.5h7z\"/>",
+    "scroll": "<path d=\"M7 4.5h11a2 2 0 0 1 0 4h-1.5V18a2 2 0 0 1-2 2H5a2 2 0 0 1 0-4h1.5V6.5A2 2 0 0 1 7 4.5z\"/><path d=\"M10 9h4M10 12.5h4\"/>",
+    "roof": "<path d=\"M3 11 12 4l9 7\"/><path d=\"M6 9.5V20h12V9.5\"/><path d=\"M10 20v-5h4v5\"/>",
+    "tent": "<path d=\"M12 4 2.5 20h19z\"/><path d=\"M12 13l-3 7M12 13l3 7\"/>",
+    "coin": "<circle cx=\"12\" cy=\"12\" r=\"8.5\"/><circle cx=\"12\" cy=\"12\" r=\"5\"/><path d=\"M12 3.5V7M12 17v3.5\"/>",
+    "gem": "<path d=\"M7 4.5h10l3.5 5-8.5 10-8.5-10z\"/><path d=\"M3.5 9.5h17M9.5 4.5 8 9.5l4 10 4-10-1.5-5\"/>",
+    "nib": "<path d=\"M12 3l6 7-6 11-6-11z\"/><path d=\"M12 3v8\"/><circle cx=\"12\" cy=\"13\" r=\"1.6\"/>",
+    "nodes": "<circle cx=\"12\" cy=\"5\" r=\"2\"/><circle cx=\"5\" cy=\"18\" r=\"2\"/><circle cx=\"19\" cy=\"18\" r=\"2\"/><path d=\"M11 6.8 6 16.3M13 6.8l5 9.5M7 18h10\"/>",
+    "rings": "<circle cx=\"9\" cy=\"12\" r=\"5.5\"/><circle cx=\"15\" cy=\"12\" r=\"5.5\"/>",
+    "heart": "<path d=\"M12 20s-7.5-4.5-7.5-10A4.5 4.5 0 0 1 12 7.5 4.5 4.5 0 0 1 19.5 10C19.5 15.5 12 20 12 20z\"/>",
+    "flask": "<path d=\"M9.5 3.5h5M10.5 3.5v6L5 19a1.2 1.2 0 0 0 1 1.5h12a1.2 1.2 0 0 0 1-1.5l-5.5-9.5v-6\"/><path d=\"M7.5 15h9\"/>",
+    "hammer": "<path d=\"M14.5 4.5l5 5L17 12l-5-5z\"/><path d=\"M14.5 9.5l-10 10\"/>",
+    "note": "<path d=\"M9 18V5.5l10-2V16\"/><circle cx=\"6.5\" cy=\"18\" r=\"2.5\"/><circle cx=\"16.5\" cy=\"16\" r=\"2.5\"/>",
+    "cup": "<path d=\"M5 8h12v5a6 6 0 0 1-12 0z\"/><path d=\"M17 9.5h1.5a2.5 2.5 0 0 1 0 5H17M8 3.5v2M11 3v2.5M14 3.5v2\"/>"
+  }
+}

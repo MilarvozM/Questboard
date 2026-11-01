@@ -24,6 +24,10 @@
     // Where the system can't watch a folder tree (Linux on Node 18), rescan the folder this often instead.
     "pollSeconds": 3
   },
+  // Every save writes a temporary file and renames it over the quest file. Windows refuses the rename while
+  // another program (an editor, a sync tool) is reading the file, so Questboard tries this many times, this many milliseconds apart.
+  "renameTries": 5,
+  "renameRetryMs": 50,
 
   // ---------------------------------------------------------------- quests
 
@@ -39,6 +43,8 @@
   "levelXpStep": 250,
   // Most quests the Favorites panel accepts from the star button.
   "favoritesMax": 5,
+  // Ticking the last completion criterion of a main or side quest completes the quest.
+  "completeOnAllCriteria": true,
   // With nothing tracked, a quest (or its current step) due within this many days counts as urgent in the focus strip.
   "urgentDays": 3,
   // Countdowns under this many hours turn red and pulse.
@@ -63,7 +69,13 @@
     // First day of the week in the calendar and the player page: "sunday" or "monday".
     "weekStart": "sunday",
     // What the calendar draws: "quests", "steps" (quests + steps) or "everything" (adds closed quests).
-    "calendarMode": "quests"
+    "calendarMode": "quests",
+    // Quest list order: "due" (nearest due date, steps included), "deadline" (the quest's own), "created" (newest first) or "title".
+    "listSort": "due",
+    // With every type shown, group the quest list by type (true) or mix the types (false).
+    "listGroup": true,
+    // Left rail sections folded shut.
+    "fold": { "favorites": false, "types": false, "guilds": false }
   },
   // Keep sound cues silent when the system asks for reduced motion.
   "muteWithReducedMotion": false,
@@ -73,11 +85,25 @@
   "bannerMs": 2000,
   // How long the larger OBJECTIVE COMPLETE banner stays, in milliseconds.
   "bannerCompleteMs": 2600,
+  // Redraw the countdowns this often, in seconds, while nothing is open or being edited.
+  "redrawSeconds": 30,
+  // After a change on disk, wait this long before reloading, in milliseconds, so a burst of changes reloads once.
+  "reloadDelayMs": 50,
+  // In From AI / import, wait this long after typing stops before reading the pasted answer, in milliseconds.
+  "importPreviewDelayMs": 250,
+  // Quest chips shown in one calendar day before "+ more". A crowded month (six rows, or a window less than
+  // crowdedBelowPx tall) shows the crowded number instead.
+  "calendarChips": { "perDay": 3, "crowded": 2, "crowdedBelowPx": 820 },
+  // The AI prompt's example dates lie this many days after today: the quest's deadline and a step's.
+  "promptExampleDays": { "deadline": 14, "due": 10 },
+  // A new activity, or a quest changed into one, starts its schedule picker at every this many days.
+  "newActivityEveryDays": 1,
 
   // Keyboard shortcuts. Values are browser key names: a letter, a digit, or a name such as "Escape".
   // An uppercase letter means Shift + that letter. "Mod+" means Ctrl on Windows and Linux, Cmd on macOS.
   "keys": {
     "capture": "n",
+    "search": "/",
     "newQuest": "N",
     "viewLog": "1",
     "viewCalendar": "2",

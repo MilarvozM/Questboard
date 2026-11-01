@@ -4,10 +4,6 @@
 # Personal overrides of config.default.jsonc
 /config.jsonc
 
-# Build output and dependencies (v1 has none; the later single-file downloads will)
-/dist/
-node_modules/
-
 # Logs
 *.log
 

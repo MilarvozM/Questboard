@@ -1,0 +1,36 @@
+{
+  "questboard": 1,
+  "days": {
+    "2026-10-13": {
+      "home": { "main": 0, "side": 1, "activity": 0, "abandoned": 0, "xp": 150 }
+    },
+    "2026-10-15": {
+      "work": { "main": 1, "side": 0, "activity": 0, "abandoned": 0, "xp": 300 }
+    },
+    "2026-10-16": {
+      "people": { "main": 0, "side": 1, "activity": 0, "abandoned": 0, "xp": 50 }
+    },
+    "2026-10-18": {
+      "play": { "main": 0, "side": 0, "activity": 0, "abandoned": 1, "xp": 0 }
+    },
+    "2026-10-21": {
+      "admin": { "main": 0, "side": 1, "activity": 0, "abandoned": 0, "xp": 75 }
+    },
+    "2026-10-24": {
+      "home": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 }
+    },
+    "2026-10-26": {
+      "health": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 }
+    },
+    "2026-10-27": {
+      "home": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 }
+    },
+    "2026-10-28": {
+      "health": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 }
+    },
+    "2026-10-30": {
+      "health": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 },
+      "home": { "main": 0, "side": 0, "activity": 1, "abandoned": 0, "xp": 20 }
+    }
+  }
+}

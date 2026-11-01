@@ -12,20 +12,13 @@
 <header class="top">
   <div class="brand"><div class="brand-mark"></div><b data-t="brand"></b></div>
   <nav class="tabs" id="tabs"></nav>
-  <div class="capture" id="capture">
-    <span class="plus">+</span>
-    <input id="cap" autocomplete="off" spellcheck="false">
-    <kbd data-key="capture"></kbd>
-    <button class="newq" data-newq><span data-t="new_quest"></span><kbd data-key="newQuest"></kbd></button>
-    <div class="cap-pop frame" id="cap-pop"></div>
-  </div>
+  <div class="search" id="search"></div>
   <button class="player" data-player>
     <div class="xp"><div class="row"><span>XP</span><span id="xp-n"></span></div><div class="bar"><i id="xp-bar"></i></div></div>
     <div class="lvhex hexclip"><div><small>LV</small><strong id="lv"></strong></div></div>
   </button>
-  <label class="lang"><svg class="ic" viewBox="0 0 24 24" style="width:15px;height:15px"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.5 3.5 5.5 3.5 8.5s-1 6-3.5 8.5c-2.5-2.5-3.5-5.5-3.5-8.5s1-6 3.5-8.5z"/></svg>
-    <select id="lang"></select></label>
-  <button class="gear" data-settings><svg class="ic" viewBox="0 0 24 24" style="width:17px;height:17px"><circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></button>
+  <button class="tb" id="skin" data-skin></button>
+  <button class="tb" id="gear" data-settings></button>
 </header>
 
 <section class="focus" id="focus"></section>
@@ -40,6 +33,9 @@
 </div>
 
 <div class="pop frame" id="pop"></div>
+<button class="fab hexclip" id="fab" data-fab></button>
+<section class="capbox frame" id="capbox"></section>
+<div class="pick frame" id="pick"></div>
 <div class="drawer-back" id="drawer-back" data-fclose></div>
 <aside class="drawer" id="drawer"></aside>
 <section class="results" id="done"></section>
@@ -49,6 +45,6 @@
 <section class="pview frame" id="pview"></section>
 <div class="lost" id="lost"></div>
 
-<script src="/app.js"></script>
+<script type="module" src="/main.js"></script>
 </body>
 </html>
