@@ -49,6 +49,17 @@ node "C:\Users\you\Documents\Questboard-main\questboard.js"
 
 Settings for power users, Obsidian, hand-written quest files, styles and languages: [ADVANCED.md](ADVANCED.md).
 
+## Uninstall
+
+1. **Stop Questboard** if it is running.
+2. **Keep your quests**, if you want them, by copying the `data` folder somewhere else. If you set `dataDir` to another folder, your quests are there instead, and deleting Questboard leaves them in place.
+3. **Delete the Questboard folder.** Questboard installs nothing else, so this removes it along with your settings.
+
+Two things may remain:
+
+- **Demo leftovers:** a demo that was not stopped cleanly can leave a folder named `questboard-demo-…` in your system's temp folder. On Windows, type `%TEMP%` in the File Explorer address bar to open it, then delete any such folder.
+- **Node.js** is a separate program. If nothing else needs it, uninstall it the way you remove other programs (Windows: **Settings → Apps → Installed apps**).
+
 ## License
 
 [MIT](LICENSE)
